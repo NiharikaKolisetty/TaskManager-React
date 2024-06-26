@@ -41,7 +41,8 @@ const AddTask = ({ taskList, setTaskList, edittask, setEdittask }) => {
           maxLength={25}
           onChange={handleInputChange}
         />
-        <button type="submit">Add</button>
+       <button type="submit">{edittask.id ? "Update" : "Add"}</button>
+
       </form>
     </section>
   );
