@@ -1,18 +1,21 @@
-*{
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header{
+header {
   display: flex;
-  justify-content: space-between; 
-  align-items: center;           
-  padding: 0 10px;               
-  background-color: hsl(240, 60%, 49%); 
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background-color: hsl(240, 60%, 49%);
   height: 50px;
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -20,7 +23,7 @@ header{
 
 .logo img {
   height: 35px;
-  width: 35px;  
+  width: 35px;
   border-radius: 10px;
 }
 
@@ -32,12 +35,148 @@ header{
 
 .themeSelector {
   display: flex;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .themeSelector span {
   cursor: pointer;
   color: hsl(38, 21%, 93%);
+}
+
+.addTask {
+  padding: 10px;
+  width: 90%;
+  max-width: 300px;
+  margin: 30px auto;
+  text-align: center;
+  background-color: hsl(229, 78%, 70%);
+  border-radius: 10px;
+}
+
+.addTask input {
+  width: 100%;
+  max-width: 200px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.addTask input:hover {
+  border: none;
+}
+
+.addTask button {
+  height: 30px;
+  width: 40px;
+  margin-left: 20px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: rgb(43, 40, 177);
+  text-align: center;
+}
+
+.addTask button:hover {
+  background-color: rgb(14, 10, 255);
+  cursor: pointer;
+}
+
+.showTask {
+  padding: 10px;
+  margin: 10px auto;
+  background-color: hsl(229, 78%, 70%);
+  height: auto;
+  width: 90%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.showTask .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: rgb(237, 190, 175);
+  font-size: 20px;
+  font-style: normal;
+}
+
+.count {
+  color: seashell;
+  background-color: #ccc;
+  margin-left: 5px;
+  border-radius: 70px;
+  padding: 1px;
+  width: 50px;
+  height: 20px;
+  text-align: center;
+}
+
+.clearAll {
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 70px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: rgb(43, 40, 177);
+}
+
+.clearAll:hover {
+  background-color: rgb(14, 10, 255);
+  cursor: pointer;
+}
+
+.showTask hr {
+  margin: 10px 0;
+}
+
+.showTask ul {
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap to new row */
+  justify-content: center; /* Center items horizontally */
+}
+
+.showTask li {
+  list-style: none;
+  padding: 15px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  margin: 10px;
+  width: calc(33.33% - 20px); /* Adjusted width with margins considered */
+}
+
+.showTask .name {
+  color: black;
+  margin: 10px;
+}
+
+.showTask .time {
+  color: grey;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.showTask i {
+  display: inline-flex;
+  margin: 5px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.pen-icon {
+  color: green;
+  margin-left: 100px;
+}
+
+.trash-icon {
+  color: red;
 }
 
 @media (max-width: 768px) {
@@ -55,6 +194,14 @@ header{
     flex-direction: row;
     justify-content: center;
   }
+
+  .addTask {
+    width: 80%;
+  }
+
+  .showTask {
+    width: 80%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -69,5 +216,27 @@ header{
   .themeSelector {
     flex-direction: column;
     gap: 5px;
+  }
+
+  .addTask {
+    width: 90%;
+  }
+
+  .showTask {
+    width: 90%;
+  }
+
+  .addTask input {
+    width: 70%;
+    max-width: none;
+  }
+
+  .addTask button {
+    width: 50px;
+    margin-left: 10px;
+  }
+
+  .showTask li {
+    width: calc(50% - 20px); /* Adjusted width for smaller screens */
   }
 }
